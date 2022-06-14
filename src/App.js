@@ -1,4 +1,5 @@
 //Codility Question!
+//The approach of the problem 
 
 import React, { useCallback, useState } from 'react';
 // import classnames from 'classnames';
@@ -21,7 +22,7 @@ export default function App(props) {
     setDropdownOptions([]);
     setLoading(true);
     axios
-      .get(`${ITEMS_API_URL}?q=${val}`)
+      .get(`${ITEMS_API_URL}?q=${val}`) //query parameter.
       .then((res) => {
         setDropdownOptions(res.data.splice(0, 10));
         setLoading(false);
